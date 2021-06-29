@@ -1,7 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Image, View, Text } from "react-native";
 
-export default function renderItem({ item, index, separators, changeUpdate }) {
+export default function renderItem({ item, index, separators, changeUpdate, length}) {
     const product = {
         images: item.images,
         name: item.name,
@@ -11,13 +11,15 @@ export default function renderItem({ item, index, separators, changeUpdate }) {
         short_description: item.short_description,
         categories: item.categories,
         attributes: item.attributes,
+        sale_price:item.sale_price,
+        id:item.id
     };
     
     return (
         <TouchableOpacity
             style={{
                 width: 160,
-                marginRight: 10,
+                marginRight: length-1 != index ? 10 : 0,
                 backgroundColor: "whitesmoke",
                 padding: 6,
                 borderRadius: 5,
