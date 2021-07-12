@@ -1,5 +1,8 @@
 node_modules/
 .expo/
+.expo-shared/
+.idea/
+android/
 npm-debug.*
 *.jks
 *.p8
@@ -11,3 +14,4 @@ web-build/
 test.http
 # macOS
 .DS_Store
+
