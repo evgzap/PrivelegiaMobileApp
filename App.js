@@ -30,7 +30,7 @@ export default function App() {
     useEffect(() => {
         const params = { key: "login", password: 1234 };
         axios
-            .get("http://95.161.172.222:7373/api/settings/get", { params })
+            .get("https://send-mail.privilegiaflower.ru/test.json")
             .then((r) => {
                 setParams(r.data);
                 setColors(r.data.color);

@@ -3,7 +3,6 @@ import { Text, ScrollView, View, TextInput, Keyboard, Dimensions, Image, StyleSh
 import { Button, Switch, Input } from "react-native-elements";
 import { getAllItemBasket, deleteAll } from "../../../../Store/Basket";
 import axios from "axios";
-import MapView, { Marker } from "react-native-maps";
 import { Alert } from "react-native";
 
 export default function Decoration({ navigation }) {
@@ -85,7 +84,7 @@ export default function Decoration({ navigation }) {
                 contentContainerStyle={{
                     padding: 10,
                     backgroundColor: "white",
-                    height: 300,
+                    height: '100%',
                     width: "100%",
                 }}
                 keyboardShouldPersistTaps="handled"
@@ -281,30 +280,6 @@ export default function Decoration({ navigation }) {
                                 Ул. Вязовая, д. 8, ЖК "Привилегия", вход с лобби
                             </Text>
                         </View>
-                        <MapView
-                            style={{
-                                height: 300,
-                                borderRadius: 10,
-                            }}
-                            onTouchStart={() => {
-                                Keyboard.dismiss();
-                            }}
-                            region={{
-                                latitude: 59.967339,
-                                longitude: 30.2762354,
-                                latitudeDelta: 0.0021,
-                                longitudeDelta: 0.0721,
-                            }}
-                        >
-                            <Marker
-                                coordinate={{
-                                    latitude: 59.967339,
-                                    longitude: 30.2762354,
-                                }}
-                                title={"Privilegia Flover"}
-                                description={"Забрать можно тут"}
-                            />
-                        </MapView>
                     </View>
                 )}
                 {items.length != 0 && (

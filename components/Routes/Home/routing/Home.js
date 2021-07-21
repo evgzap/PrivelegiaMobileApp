@@ -13,7 +13,6 @@ import {
 
 import BottomSheet from "reanimated-bottom-sheet";
 import React, { useState, useEffect, useRef } from "react";
-import MapView, { Marker } from "react-native-maps";
 
 import Animated from "react-native-reanimated";
 import HtmlText from "react-native-html-to-text";
@@ -256,28 +255,7 @@ export default function Home({ navigation, allCategories, paramsSend }) {
                                 <View style={{
                                     padding:10
                                 }}>
-                                    <MapView
                                     
-                                        style={{
-                                            height: 300,
-                                            borderRadius: 10,
-                                        }}
-                                        region={{
-                                            latitude: 59.967339,
-                                            longitude: 30.2762354,
-                                            latitudeDelta: 0.0021,
-                                            longitudeDelta: 0.0721,
-                                        }}
-                                    >
-                                        <Marker
-                                            coordinate={{
-                                                latitude: 59.967339,
-                                                longitude: 30.2762354,
-                                            }}
-                                            title={"Privilegia Flover"}
-                                            description={"Забрать можно тут"}
-                                        />
-                                    </MapView>
                                 </View>
                             </ScrollView>
                         </SafeAreaView>
